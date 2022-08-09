@@ -56,6 +56,10 @@ project right click -> Add -> Project Reference...
 
 Renaming: Ctrl + RR
 
+Debug:
+- Authos window - shows variables in scope, allows to 'Add (items to) watch'
+- Debug > Windows > Output
+
 ### Misc
 
 ```cs
@@ -77,11 +81,22 @@ Encapsulation
 - Information is contained within the object, and only certain - exposed
 - Properties, e.g.,
 `public string Name { get; private set; } = "unknown";` (starts with capital letter)
+- Public, private, protected
 
-Abstraction
 Inheritance
+- Is-A relation vs. Has-A relation (Composition)
+
 Polymorphism
+- Overriding a base class implementation
+- Uses virtual and override keywords
 
-
+Interface
+- As a contract
 
 ### Unit tests
+
+Unit Test as a separate project.
+
+- NUnit
+- xUnit
+
