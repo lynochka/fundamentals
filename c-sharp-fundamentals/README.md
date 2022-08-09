@@ -3,18 +3,18 @@
 ## Versions
  C# 10, .NET 6
 
-## Creating console applications
+## Documentation
+https://docs.microsoft.com/en-us/dotnet/csharp/
+https://docs.microsoft.com/en-us/dotnet/api/?view=net-6.0
 
+
+## Creating console applications
 .NET SDK:
 ```
 dontnet new console -n "FirstProgram"
 dotnet build
 dotnet run
 ```
-
-## Documentation
-https://docs.microsoft.com/en-us/dotnet/csharp/
-https://docs.microsoft.com/en-us/dotnet/api/?view=net-6.0
 
 ### Types
 .NET types:
@@ -61,14 +61,13 @@ Debug:
 - Debug > Windows > Output
 
 ### Misc
-
 ```cs
 #region
 //collapsed code
 #endregion
 ```
 
-# Garbage collection
+### Garbage collection
 ```cs
 employees.Clear()
 employees = null;
@@ -100,3 +99,24 @@ Unit Test as a separate project.
 - NUnit
 - xUnit
 
+## Next
+### Working with DBs
+ADO.NET (older), Entity Framework Core (an ORM, object-relational mapper)
+
+### Linq (Language-Integrated Query)
+
+### Async coding
+
+### Deskop Applications
+WPF, WinForms (older)
+
+### Web
+ASP.NET Core
+- Server-side UI: MVC, Razor Pages
+- Client-side UI: Blazor
+
+### API
+ASP.NET Core
+
+### Mobile
+Xamarin, Maui
