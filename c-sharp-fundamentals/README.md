@@ -72,6 +72,16 @@ employees = null;
 GC.Collect();
 ```
 
+### OO
+Encapsulation
+- Information is contained within the object, and only certain - exposed
+- Properties, e.g.,
+`public string Name { get; private set; } = "unknown";` (starts with capital letter)
+
+Abstraction
+Inheritance
+Polymorphism
+
 
 
 ### Unit tests

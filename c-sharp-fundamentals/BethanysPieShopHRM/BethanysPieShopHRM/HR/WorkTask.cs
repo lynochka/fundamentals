@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShopHRM.HR
 {
-    struct WorkTask
+    internal struct WorkTask
     {
         public string description;
         public int hours;
