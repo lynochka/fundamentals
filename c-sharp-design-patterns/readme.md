@@ -34,10 +34,33 @@ Singleton pattern structure:
 1. A private backing field contains the stored instance value.
 1. SingletonOperation() is an operation on the singleton instance, such as `Log()`.
 
-#### Abstract Factory
-#### Builder
+(!) Violates single responsibility principle.
+
 #### Factory Method
+Intent: to define an interface for creating an object, but to let a subclass decide which class to instatiate.
+FM lets a class differ instantiation to one or more subclasses.
+
+Use-cases: 
+1. When a class can't anticipate the class of objects it must create.
+1. When a class wants its subclasses to specify the objects it creates.
+
+Product and Creator can be implemented as interface instead of an abstract base class.
+
+#### Abstract Factory
+(can be implemented as a singleton)
+
+(often implemented with factory methods)
+
+Intent: to provde an interface for creating families of related or dependant objects without specifying their concrete classes.
+
+#### Builder
+(can be implemented as a singleton)
+
+
 #### Prototype
+(can be implemented as a singleton)
+
+(In relation to FM - no subclassing is needed, not based on inheritance, but an initialize action on Product is often required)
   
 
 ### Structural
@@ -50,23 +73,25 @@ Singleton pattern structure:
   - Proxy
 
 ### Behavioral
-  - Chain of Responsibility
+
+#### Chain of Responsibility
 
 Passes a request along a chain of receivers
 
-  - Command
-
+#### Command
 Connects senders withe receivers unindirectionally
 
-  - Interpreter
-  - Iterator
-  - Mediator
-  - Momento
-  - Observer
-  - State
-  - Strategy
-  - Template Method
-  - Visitor
+#### Interpreter
+#### Iterator
+#### Mediator
+#### Momento
+#### Observer
+#### State
+  (State objects are often implemented as singletons)
+#### Strategy
+#### Template method
+(FMs are often called from within template methods)
+#### Visitor
 
 
 ## Common Object-Oriented pricipals
