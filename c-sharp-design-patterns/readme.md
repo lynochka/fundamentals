@@ -1,7 +1,7 @@
-## Versions
+# Versions
 .NET 6.0, C# 10
 
-## Gang of Four (23 patterns)
+# Gang of Four (23 patterns)
 
 - Intent of the pattern
 - Structure of the pattern
@@ -9,11 +9,10 @@
 - User-cases, consequences, related patterns.
 
 
-## Pattern types
-### Creational
+# Pattern types
+## Creational
 
-#### Singleton 
-
+### Singleton 
 Intent: ensure that a class only has one instance, and to provide a global point of access to it
 
 Example: a logger.
@@ -36,7 +35,7 @@ Singleton pattern structure:
 
 (!) Violates single responsibility principle.
 
-#### Factory Method
+### Factory Method
 Intent: to define an interface for creating an object, but to let a subclass decide which class to instatiate.
 FM lets a class differ instantiation to one or more subclasses.
 
@@ -46,24 +45,38 @@ Use-cases:
 
 Product and Creator can be implemented as interface instead of an abstract base class.
 
-#### Abstract Factory
-(can be implemented as a singleton)
-
-(often implemented with factory methods)
-
+### Abstract Factory
 Intent: to provde an interface for creating families of related or dependant objects without specifying their concrete classes.
 
-#### Builder
-(can be implemented as a singleton)
+Use-cases:
+1. When a system should be independent of how ots products are created, composed and represented.
+1. When you want to provide a class library of products and only reveal their interfaces, but not their implementations.
+1. When a system should be considered with one of multiple families of products.
+
+| Factory method | Abstract Factory |
+|---|---:|
+|Exposes an interface with a method on it, the factory method, to create an object of a certain type| Exposes an interface to create related objects: families of objects|
+|Produces one product| ... a family of products|
+|Creates objects through inheritance | ... through composition|
+
+Related patterns:
+* A concrete factory is often implemented as a singleton
+* Often implemented with factory methods
+* Can be implemented using prototypes
 
 
-#### Prototype
-(can be implemented as a singleton)
+### Builder
+Related patterns:
+* Can be implemented as a singleton
 
-(In relation to FM - no subclassing is needed, not based on inheritance, but an initialize action on Product is often required)
+
+### Prototype
+Related patterns:
+* Can be implemented as a singleton
+* In relation to FM - no subclassing is needed, not based on inheritance, but an initialize action on Product is often required
   
 
-### Structural
+## Structural
   - Adapter
   - Bridge
   - Composite
@@ -72,29 +85,35 @@ Intent: to provde an interface for creating families of related or dependant obj
   - Flyweght
   - Proxy
 
-### Behavioral
+## Behavioral
 
-#### Chain of Responsibility
+### Chain of Responsibility
 
 Passes a request along a chain of receivers
 
-#### Command
+### Command
 Connects senders withe receivers unindirectionally
 
-#### Interpreter
-#### Iterator
-#### Mediator
-#### Momento
-#### Observer
-#### State
-  (State objects are often implemented as singletons)
-#### Strategy
-#### Template method
-(FMs are often called from within template methods)
-#### Visitor
+### Interpreter
+### Iterator
+### Mediator
+### Momento
+### Observer
+### State
+Related patterns:
+* State objects are often implemented as singletons)
 
 
-## Common Object-Oriented pricipals
+### Strategy
+### Template method
+Related patterns:
+* FMs are often called from within template methods
+
+
+### Visitor
+
+
+# Common Object-Oriented pricipals
 - Program to an interface, not an implementation
   - Interface as the object's type - a set of requests an object can respond to
 - Favor object composition over class inheritance
