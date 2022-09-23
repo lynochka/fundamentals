@@ -107,6 +107,20 @@ Related patterns:
 
 
 ### Bridge
+Intent: decouple an abstraction from its implementation so the two can vary independently.
+
+Separate abstraction from implementation: a means to replace implementation with another implementation without modifying the abstraction. See 'abstraction' as a way to simplify something complex.
+
+Use-cases:
+1. Avoid a permanent binding between an abstraction and its implementation, e.g., to enable switching implementations at runtime.
+1. When abstraction and implementation should be externsible by subclassing.
+1. You don't want changes in the implementation have an impact on the client.
+
+Related patterns:
+* Abstract factory can create and cofigure a bridge.
+* Adapter lets unrelated classes work together, brigde lets abstractions and implementations vary independently.
+* Strategy & State are based on composition, like bridge.
+
 ### Composite
 ### Decorator
 ### Facade
