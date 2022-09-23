@@ -73,16 +73,22 @@ Use-cases:
 1. To allow different representations for the object that's constructed.
 
 Related patterns:
-* Can be implemented as a singleton
+* Can be implemented as a singleton.
 * With abstract factory both can be used to construct complex objects, but the builder constructs the complex object step by step.
 * Composites are often built by builders.
 
 
 ### Prototype
+Intent: specify the kinds of objects to create using a prototypical instance and create new objects by copying this prototype.
+
+Use-cases:
+1. When a system should be independent of how its objects are created, and (A) to avoid building a set of factories that mimic the class hierarchy, (B) when instances of a class can have one of only a few different combinations of states.
+
 Related patterns:
-* Can be implemented as a singleton
-* In relation to FM - no subclassing is needed, not based on inheritance, but an initialize action on Product is often required
-  
+* Can be implemented as a singleton.
+* In relation to FM - no subclassing is needed, not based on inheritance, but an initialize action on Product is often required.
+* In relation to abstract factory - a factory might store a set of prototypes from which it clones when a new instance is requested.  
+* Decorator can use prototype for convenient object creation.
 
 ## Structural
   - Adapter
