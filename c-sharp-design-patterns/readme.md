@@ -46,10 +46,10 @@ Use-cases:
 Product and Creator can be implemented as interface instead of an abstract base class.
 
 ### Abstract Factory
-Intent: to provde an interface for creating families of related or dependant objects without specifying their concrete classes.
+Intent: to provide an interface for creating families of related or dependant objects without specifying their concrete classes.
 
 Use-cases:
-1. When a system should be independent of how ots products are created, composed and represented.
+1. When a system should be independent of how its products are created, composed and represented.
 1. When you want to provide a class library of products and only reveal their interfaces, but not their implementations.
 1. When a system should be considered with one of multiple families of products.
 
@@ -66,8 +66,16 @@ Related patterns:
 
 
 ### Builder
+Intent: separate the construction of a complex object from its representation. The same construction process can create different representations.
+
+Use-cases:
+1. To make an algorithm for creating complex object independent of the parts that make up the object and how they are assembled.
+1. To allow different representations for the object that's constructed.
+
 Related patterns:
 * Can be implemented as a singleton
+* With abstract factory both can be used to construct complex objects, but the builder constructs the complex object step by step.
+* Composites are often built by builders.
 
 
 ### Prototype
