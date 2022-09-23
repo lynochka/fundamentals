@@ -90,14 +90,28 @@ Related patterns:
 * In relation to abstract factory - a factory might store a set of prototypes from which it clones when a new instance is requested.  
 * Decorator can use prototype for convenient object creation.
 
+
 ## Structural
-  - Adapter
-  - Bridge
-  - Composite
-  - Decorator
-  - Facade
-  - Flyweght
-  - Proxy
+
+### Adapter (a wrapper pattern)
+Intent: to convert the interface of a class into another interface clients expect. It lets classes with otherwise incompatible interfaces work together.
+
+- Class adapter (relies on composition)
+- Object adapter (relies on multiple inheritance, C# supports a variation by combining a base class with an interface)
+
+Related patterns:
+* Bridge separates interface from implementation, adapter changes the interface of an existing object.
+* Decorator changes an object without changing its interface, adapter ... 
+* With facade you define a new interface for an entire subsystem, with adapter you are making an existing interface useable via wrapping.
+* Proxy defines a surrogate for another object, but does not change its interface.
+
+
+### Bridge
+### Composite
+### Decorator
+### Facade
+### Flyweight
+### Proxy
 
 ## Behavioral
 
