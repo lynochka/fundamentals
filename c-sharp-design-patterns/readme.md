@@ -121,8 +121,25 @@ Related patterns:
 * Adapter lets unrelated classes work together, brigde lets abstractions and implementations vary independently.
 * Strategy & State are based on composition, like bridge.
 
-### Composite
+
 ### Decorator
+Intent: attach (or withdraw) additional responsibilities to an object dynamically (at runtime). It provides a flexible alternative to subclassing for extending functionality, 
+
+`Component` - an interface for objects that can have responsibilities added to them dynamicaly.
+
+`Decorator` maintains a reference to a Component object and defines an interface that conforms to Component's interface.
+
+* Decorator helps when subclassing is impractical or impossible.
+* Use the pattern to split feature-loaded classes until there's just one responsibility left per class.
+* Increases the effort to learn the system having many small simple classes.
+
+Related patterns:
+* Adapter gives a new interface to an object, decorator only changes its responsibilities.
+* A decorator can be viewed as a composite with only one component, but is not intended for object aggregation.
+* Strategy lets you change the inner workings of an object, while the decorator changes its skin :D
+
+
+### Composite
 ### Facade
 ### Flyweight
 ### Proxy
