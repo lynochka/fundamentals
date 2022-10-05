@@ -140,6 +140,28 @@ Related patterns:
 
 
 ### Composite
+Intent: composite objects into tree structures to represent part-whole hierarchies. It lets clients treat individual objects and compositions of objects uniformaly: as if they all were individual objects.
+
+`Component` declares the interface for objects in the compositions, and contains a common operation. It potentially implements the default behavior (when implemented as an abstract class).
+
+`Leaf` represents an object in the composition that has no children. It defines behavior for primitive objects in the composition.
+
+`Composite` stores child components and defines behavior for components having children.
+
+`Client` manipulates objects in the composition through the Component interface.
+
+* Component abstract base can, if needed, define an operation to get a specific child by index.
+* Similarly add/remove operations do not have to be defined by Component, but exist on Composite directly.
+* Composition makes the client simple.
+* It is easy to add new kinds of components: open/closed principle.
+* The overall system can become too generic - harder to restrict the components of a composite.
+
+Related patterns:
+* Leaf component can pass a request through a chain of all parent components.
+* Iterator can be used to traverse composites.
+* Visitor can be used to execute an operation over the full composite tree. It can localize operations and behavior that would otherwise be distributed across composite and leaf classes.
+
+
 ### Facade
 ### Flyweight
 ### Proxy
