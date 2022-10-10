@@ -163,6 +163,16 @@ Related patterns:
 
 
 ### Facade
+Intent: provide a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use.
+
+* Facade knows which subsystem classes are responsible for a request, and delegates client requests to appropriate subsystem objects.
+
+Related patterns:
+* Abstact factory can provide an interface for creating subsytem objects.
+* Mediator also abstracts functionality of existing classes, but its purpose is abstracting communication between objects, while facade is about promoting ease of use.
+* Adapter makes existing interface useable by wrapping one object, while with facade you're defining a new interface for an entire subsystem.
+
+
 ### Flyweight
 ### Proxy
 
