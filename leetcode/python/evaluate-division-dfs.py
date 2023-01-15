@@ -28,5 +28,4 @@ class Solution:
         answers = []
         for query in queries:
             answers.append(dfs(set(), 1.0, query[0], query[1]))
-
         return answers
